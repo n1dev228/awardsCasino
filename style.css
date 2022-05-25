@@ -139,6 +139,9 @@ FLEX CLASSES END
   left: 0;
   padding: 20px 0;
 }
+.simple__header {
+  position: static;
+}
 .logo {
   width: 100%;
   text-align: center;
@@ -317,4 +320,71 @@ FLEX CLASSES END
   justify-content: center;
   text-align: center;
   width: 100%;
+}
+.product-image {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  margin: 0 auto 20px ;
+  display: block;
+}
+.product__title {
+  color: #c6a878;
+  text-align: center;
+  font-size: 32px;
+  text-transform: uppercase;
+  padding: 20px ;
+}
+.product__descr {
+  text-align: center;
+  color: #b6b6b6;
+  margin-bottom: 20px;
+}
+.product__tags {
+  margin: 0 0 40px 0;
+  padding: 20px 0;
+  border-bottom: 1px solid #c6a878;
+  position: relative;
+}
+.product__tags::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 20px solid transparent;
+  border-top: 10px solid #c6a878;
+}
+.tag-heading {
+  color: #c6a878;
+}
+.product__tag {
+  width: 100%;
+  max-width: 180px;
+  text-align: center;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 10px;
+  border: 1px solid #c6a878;
+  color: #c6a878;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: 0.3s;
+}
+.product__tag:hover {
+  background: #c6a878;
+  color: #222;
+}
+.product__tag:before {
+  content: '\f559';
+  font-family: 'fontawesome';
+}
+.breads a,
+.breads span {
+  color: #c6a878;
+}
+.breads .last {
+  color: #b6b6b6;
 }

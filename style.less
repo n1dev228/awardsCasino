@@ -145,6 +145,9 @@ FLEX CLASSES END
     left: 0;
     padding: 20px 0;
 }
+.simple__header {
+    position: static;
+}
 .logo {
     width: 100%;
     text-align: center;
@@ -277,7 +280,7 @@ FLEX CLASSES END
         position: absolute;
         left: 50%; top: -7%;
         left: 50%;
-    transform: translateX(-50%);
+        transform: translateX(-50%);
         border: 20px solid transparent;
         border-bottom:10px solid rgb(53, 53, 53);
     }
@@ -340,4 +343,77 @@ FLEX CLASSES END
     text-align: center;
     width: 100%;
 
+}
+
+.product-image {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    margin: 0 auto 20px ;
+    display: block;
+}
+.product__title {
+    color: @gold;
+    text-align: center;
+    font-size: 32px;
+    text-transform: uppercase;
+    padding: 20px ;
+
+}
+.product__descr {
+    text-align: center;
+    color: @gray-font;
+    margin-bottom: 20px;
+}
+.product__tags {
+    margin: 0 0 40px 0;
+    padding: 20px 0;
+    border-bottom: 1px solid @gold;
+    position: relative;
+    &::after {
+        content: ''; 
+        position: absolute;
+       top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        border: 20px solid transparent;
+        border-top:10px solid @gold;;
+    }
+}
+.tag-heading {
+    color: @gold;
+}
+.product__tag {
+    width: 100%;
+    max-width: 180px;
+    text-align: center;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid @gold;
+    color: @gold;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: .3s;
+    
+    &:hover {
+        background: @gold;
+        color: #222;
+    }
+    &:before {
+        content: '\f559';
+        font-family: 'fontawesome';
+        
+    }
+}
+
+.breads {
+    a, span {
+        color: @gold;
+    }
+    .last {
+        color: @gray-font;
+    }
 }
