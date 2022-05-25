@@ -38,7 +38,21 @@ if(voteModal) {
     const closeModal = voteModal.querySelector('.close');
     const countryDropdown = voteModal.querySelector('.country__dropdown');
     const countriesInDropdown = countryDropdown.querySelectorAll('.country'); 
-    
+    const rating = voteModal.querySelectorAll('.rating');
+
+    rating.forEach((el) => {
+        el.addEventListener('click', (e) => {
+
+            rating.forEach((innerEl) => {
+                if(innerEl.classList.contains('voteModal__rating_active')) {
+                    innerEl.classList.remove('voteModal__rating_active');
+                } 
+            })
+
+            el.classList.add('voteModal__rating_active');
+        })
+    })
+
     voteNowButton.forEach((el) => {
         el.addEventListener('click', (e) => {
             voteOverlay.classList.add('voteOverlay__opened')

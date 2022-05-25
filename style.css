@@ -466,6 +466,10 @@ FLEX CLASSES END
   background-color: #c6a878;
   color: #222;
 }
+.voteModal__rating_active {
+  background-color: #c6a878;
+  color: #222;
+}
 .countries {
   position: relative;
 }
