@@ -12,6 +12,7 @@
     <title>Document</title>
 </head>
 <body>
+
     <main class="home">
         <div class="overlay"></div>
 
@@ -55,7 +56,7 @@
                 <div class="nominant nominants__nominant">
                     <span class="title nominant__title">Joocasino</span>
                     <img class="img nominant__img" src="img/logo-joo.svg" width="100" height="100" alt="">
-                    <a href="#" class="btn btn-main">Do something</a>
+                    <button class="btn btn-main nominant__btn_vote">Vote Now!</button>
                     <a href="nominee.html" class="readmore">Read more</a>
                 </div>
     
@@ -168,21 +169,21 @@
                         <div class="nominant nominants__nominant">
                             <span class="title nominant__title">N1 Casino2</span>
                             <img class="img nominant__img" src="img/logo-casino.svg" width="100" height="100" alt="">
-                            <a href="#" class="btn btn-main">Do something</a>
+                            <button class="btn btn-main nominant__btn_vote">Do something</button>
                             <a href="#" class="readmore">Read more</a>
                         </div>
             
                         <div class="nominant nominants__nominant">
                             <span class="title nominant__title">N1 Casino</span>
                             <img class="img nominant__img" src="img/logo-casino.svg" width="100" height="100" alt="">
-                            <a href="#" class="btn btn-main">Do something</a>
+                            <button class="btn btn-main nominant__btn_vote">Do something</button>
                             <a href="#" class="readmore">Read more</a>
                         </div>
             
                         <div class="nominant nominants__nominant">
                             <span class="title nominant__title">N1 Casino</span>
                             <img class="img nominant__img" src="img/logo-casino.svg" width="100" height="100" alt="">
-                            <a href="#" class="btn btn-main">Do something</a>
+                            <button class="btn btn-main nominant__btn_vote">Do something</button>
                             <a href="#" class="readmore">Read more</a>
                         </div>
                         
@@ -330,6 +331,51 @@
 
         </div>
     </footer>
+
+    <div class="voteOverlay"></div>
+    <div class="voteModal">
+        <div class="close voteModal_close">
+            <i class="fa-solid fa-xmark"></i>  
+        </div>
+        <span class="title voteModal__title">Vote for <span>N1Partners</span> with nomination <span>Best Online Casino</span></span>
+        <form class="form voteModal__form">
+            <label class = "label voteModal__label ">Name</label>
+            <input type="text" class="input voteModal__input" name = "vote[user_name]" placeholder="Enter your name" required>
+            <label class = "label voteModal__label ">Email</label>
+            <input type="email" class="input voteModal__input" name = "vote[user_email]" placeholder="Enter your e-mail" required>
+    
+            <div class="countries voteModal__coutnries">
+                <label class="label voteModal__label" for="">Choose your country</label>
+                <span class="country countries__country current">England</span>
+                <input type="hidden" value = "England" name = "vote[country_name]" required>   
+                <div class="dropdown country__dropdown">
+                    <span class="country">England</span>
+                    <span class="country">Germany</span>
+                    <span class="country">Russia</span>
+                    <span class="country">Belarus</span>
+                    <span class="country">Japan</span>
+                    <span class="country">Ukraine</span>
+                </div>
+            </div>
+            
+            <label for="" class="label voteModal__label">Rate casino up to 10</label>
+            <input type="hidden" name = "vote[user_rating]" value = "" required>
+            <div class="ratings flex f-al-center f-gap-20">
+                <span class="rating voteModal__rating">1</span>
+                <span class="rating voteModal__rating">2</span>
+                <span class="rating voteModal__rating">3</span>
+                <span class="rating voteModal__rating">4</span>
+                <span class="rating voteModal__rating">5</span>
+                <span class="rating voteModal__rating">6</span>
+                <span class="rating voteModal__rating">7</span>
+                <span class="rating voteModal__rating">8</span>
+                <span class="rating voteModal__rating">9</span>
+                <span class="rating voteModal__rating">10</span>
+
+            </div>
+            <button class="btn voteModal__btn btn-main">Vote now</button>
+        </form>
+    </div>
     <script type="text/javascript" src="https://kit.fontawesome.com/7871274501.js" id="fontAwesome-js"></script>
     <script src="main.js"></script>
 
