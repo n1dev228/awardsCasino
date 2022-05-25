@@ -54,6 +54,7 @@ a {
   border-radius: 15px;
   color: #222;
   transition: 0.3s;
+  border: none;
 }
 .btn-main {
   background: #c6a878;
@@ -122,6 +123,15 @@ FLEX CLASSES END
   height: 600px;
   width: 100%;
   position: relative;
+}
+.home:after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 20px solid transparent;
+  border-top: 10px solid #51462c;
 }
 .overlay {
   position: absolute;
